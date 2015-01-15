@@ -15,10 +15,6 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 
-#if not os.environ.get("HOME") == ‘/PATH/TO/YOUR/HOME‘:
-    ## Parse database configuration from $DATABASE_URL
-    #import dj_database_url
-    #DATABASES['default'] = dj_database_url.config()
 
 
 
