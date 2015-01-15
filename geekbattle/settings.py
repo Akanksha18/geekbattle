@@ -14,11 +14,13 @@ import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
-import dj_database_url
 
-DATABASES['default'] =  dj_database_url.config()
-DATABASES['default']['ENGINE'] = 'django_postgrespool'
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+if not os.environ.get("HOME") == ‘/PATH/TO/YOUR/HOME‘:
+    # Parse database configuration from $DATABASE_URL
+    import dj_database_url
+    DATABASES['default'] = dj_database_url.config()
+
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/

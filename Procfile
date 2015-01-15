@@ -1,1 +1,1 @@
-web: gunicorn geekbattle.wsgi --log-file -
+web: gunicorn geekbattle.wsgi
